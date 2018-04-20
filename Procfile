@@ -1,0 +1,1 @@
+web: java -jar target/smoky-mirror-simple-1.0-SNAPSHOT.jar
