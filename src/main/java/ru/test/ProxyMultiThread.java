@@ -1,5 +1,6 @@
 package ru.test;
 
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.util.logging.Logger;
 
@@ -19,6 +20,7 @@ public class ProxyMultiThread {
             // Print a start-up message
             log.warning("Starting proxy for " + host + ":" + remoteport
                     + " on port " + localport);
+            log.info("Current IP address : " + InetAddress.getLocalHost().getHostAddress());
             ServerSocket server = new ServerSocket(localport);
             while (true) {
                 new ThreadProxy(server.accept(), host, remoteport, debug);

@@ -4,6 +4,7 @@ package ru.test;
 import javax.net.ssl.*;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.security.KeyStore;
 import java.util.logging.Logger;
@@ -32,6 +33,7 @@ public class SecureProxyMultiThread {
             log.warning("Starting proxy for " + host + ":" + remoteport +
                     " on port " + localport + " with protokol " + protokol.name() +
                     (debug ? " - DEBUG " : ""));
+            log.info("Current IP address : " + InetAddress.getLocalHost().getHostAddress());
             // And start running the server
             new SecureProxyMultiThread().start(protokol, host, remoteport, localport, debug);
         }
