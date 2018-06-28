@@ -1,5 +1,7 @@
 package ru.test;
 
+import ru.test.server.MainServer;
+
 import java.io.IOException;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -20,7 +22,11 @@ public class Main {
     public static void main(String[] args) throws IOException {
 //        System.getProperties().setProperty("javax.net.debug", "ssl");
         LogManager.getLogManager().readConfiguration(Main.class.getClassLoader().getResourceAsStream("logging.properties"));
-        SecureProxyMultiThread.main(args);
+
+        MainServer.main(args);
+
+        //ProxyMultiThread.main(args);
+        //SecureProxyMultiThread.main(args);
         log.warning("Ready !!!");
     }
 }

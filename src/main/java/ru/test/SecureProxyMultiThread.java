@@ -24,9 +24,9 @@ public class SecureProxyMultiThread {
             // and the local port that we listen for connections on
             Protokol protokol = (args.length > 0)
                     ? (Protokol.HTTPS.name().equalsIgnoreCase(args[0]) ? Protokol.HTTPS : Protokol.HTTP)
-                    : Protokol.HTTP;
+                    : Protokol.HTTP; //work only http
             String host = (args.length > 0) ? args[1] : "localhost";
-            int remoteport = Integer.parseInt((args.length > 0) ? args[2] : "80");
+            int remoteport = Integer.parseInt((args.length > 0) ? args[2] : Protokol.HTTP == protokol ? "80" : "443");
             int localport = Integer.parseInt((args.length > 0) ? args[3] : "9999");
             boolean debug = Boolean.parseBoolean((args.length > 0) ? args[4] : "true");
             // Print a start-up message
