@@ -25,7 +25,10 @@ public class Main {
 //        System.getProperties().setProperty("javax.net.debug", "ssl");
         LogManager.getLogManager().readConfiguration(Main.class.getClassLoader().getResourceAsStream("logging.properties"));
 
-        MainServer.main(args);
+        System.out.println("PORT = " + System.getenv("PORT"));
+        System.out.println("http.port = " + System.getenv("http.port"));
+
+        //MainServer.main(args);
 
         //ProxyMultiThread.main(args);
         //SecureProxyMultiThread.main(args);
