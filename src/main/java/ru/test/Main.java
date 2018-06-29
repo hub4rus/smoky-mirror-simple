@@ -26,9 +26,9 @@ public class Main {
         LogManager.getLogManager().readConfiguration(Main.class.getClassLoader().getResourceAsStream("logging.properties"));
 
         System.out.println("PORT = " + System.getenv("PORT"));
-        System.out.println("http.port = " + System.getenv("http.port"));
+        //System.out.println("http.port = " + System.getenv("http.port"));
 
-        //MainServer.main(args);
+        MainServer.main(args);
 
         //ProxyMultiThread.main(args);
         //SecureProxyMultiThread.main(args);

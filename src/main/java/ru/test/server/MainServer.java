@@ -43,7 +43,12 @@ public class MainServer extends Thread {
 
     @Override
     public void run() {
-        try (ServerSocket serverSocket = new ServerSocket(9999)) {
+        String sPort = System.getenv("PORT");
+        if (sPort == null || sPort.trim().isEmpty()) {
+            sPort = "9999";
+        }
+        LOGGER.warning(String.format("Ready !!! on port = %s", sPort));
+        try (ServerSocket serverSocket = new ServerSocket(Integer.valueOf(sPort)/*9999*/)) {
             Socket socket;
             try {
                 while ((socket = serverSocket.accept()) != null) {
