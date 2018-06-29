@@ -49,8 +49,8 @@ public class TestClient {
         //work !!!
         //Proxy proxy = Proxy.NO_PROXY;
         //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("10.0.0.1", 8080));
-        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("localhost", 9999));
-        //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("smoky-mirror.herokuapp.com", 9999));
+        //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("localhost", 9999));
+        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("smoky-mirror.herokuapp.com", 9999));
         /*
             if your proxy requires authentication it will give you response 407.
             In this case you'll need the following code:
@@ -66,7 +66,7 @@ public class TestClient {
         */
 
         //http
-        String urlGet = "http://java-online.ru/blog-tokenizer.xhtml";
+//        String urlGet = "http://java-online.ru/blog-tokenizer.xhtml";
         //String urlGet = "http://java-online.ru/";
         //String urlGet = "http://www.rgagnon.com/javadetails/java-0085.html";
 //        String urlGet = "http://www.google.com/search?q=mkyong";
@@ -74,7 +74,7 @@ public class TestClient {
 
         //https
         //String urlGet = "https://www.linuxmint.com/start/rosa/";
-        //String urlGet = "https://www.nix.ru/";
+        String urlGet = "https://www.nix.ru/";
         //String urlGet = "https://ya.ru/";
 
 
