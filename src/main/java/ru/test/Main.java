@@ -20,7 +20,7 @@ public class Main {
     public static final Logger log = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) throws IOException {
-        //sh target/bin/smoky-mirror
+        System.out.println("sh target/bin/smoky-mirror");
 
 //        System.getProperties().setProperty("javax.net.debug", "ssl");
         LogManager.getLogManager().readConfiguration(Main.class.getClassLoader().getResourceAsStream("logging.properties"));
