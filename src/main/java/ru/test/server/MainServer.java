@@ -43,7 +43,7 @@ public class MainServer extends Thread {
 
     @Override
     public void run() {
-        String sPort = "80"; //System.getenv("PORT");
+        String sPort = System.getenv("PORT");
         if (sPort == null || sPort.trim().isEmpty()) {
             sPort = "9999";
         }
