@@ -3,6 +3,7 @@ package ru.test.client;
 import java.io.*;
 import java.net.*;
 import java.security.cert.Certificate;
+import java.util.Base64;
 import java.util.Iterator;
 import java.util.List;
 
@@ -273,7 +274,8 @@ public class TestClient {
         writer.write("GET " + server.toExternalForm() + " HTTP/1.0\r\n");
         writer.write("Host: " + server.getHost() + "\r\n");
         writer.write("Proxy-Authorization: Basic "
-                + new sun.misc.BASE64Encoder().encode(
+                + //new sun.misc.BASE64Encoder().encode(
+                Base64.getEncoder().encode(
                 authentication.getBytes())
                 + "\r\n\r\n");
 
