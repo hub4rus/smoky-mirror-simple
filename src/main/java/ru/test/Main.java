@@ -28,13 +28,13 @@ public class Main {
         System.out.println("PORT = " + System.getenv("PORT"));
         //System.out.println("http.port = " + System.getenv("http.port"));
 
-        //MainServer.main(args);
+        MainServer.main(args);
 
-        try {
-            ru.test.echo.HelloWorld.main(args);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            ru.test.echo.HelloWorld.main(args);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
         //ProxyMultiThread.main(args);
         //SecureProxyMultiThread.main(args);
