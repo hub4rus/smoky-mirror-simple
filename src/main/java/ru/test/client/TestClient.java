@@ -75,9 +75,9 @@ public class TestClient {
 
         //https
         //String urlGet = "https://www.linuxmint.com/start/rosa/";
-//        String urlGet = "https://www.nix.ru/";
+        String urlGet = "https://www.nix.ru/";
         //String urlGet = "https://ya.ru/";
-        String urlGet = "https://smoky-mirror.herokuapp.com:12861/";
+//        String urlGet = "https://smoky-mirror.herokuapp.com:12861/";
 
 
         System.out.println("Testing 1 - Send Http GET request");
