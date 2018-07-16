@@ -48,10 +48,10 @@ public class TestClient {
         */
 
         //work !!!
-        //Proxy proxy = Proxy.NO_PROXY;
+//        Proxy proxy = Proxy.NO_PROXY;
         //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("10.0.0.1", 8080));
-        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("localhost", 9999));
-        //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("smoky-mirror.herokuapp.com", 56978));
+//        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("localhost", 9999));
+        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("smoky-mirror.herokuapp.com", 80));
         /*
             if your proxy requires authentication it will give you response 407.
             In this case you'll need the following code:
@@ -75,8 +75,9 @@ public class TestClient {
 
         //https
         //String urlGet = "https://www.linuxmint.com/start/rosa/";
-        String urlGet = "https://www.nix.ru/";
+//        String urlGet = "https://www.nix.ru/";
         //String urlGet = "https://ya.ru/";
+        String urlGet = "https://smoky-mirror.herokuapp.com:12861/";
 
 
         System.out.println("Testing 1 - Send Http GET request");

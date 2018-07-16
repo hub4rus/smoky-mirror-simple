@@ -47,6 +47,7 @@ public class MainServer extends Thread {
         if (sPort == null || sPort.trim().isEmpty()) {
             sPort = "9999";
         }
+        sPort = "80"; //30134
         LOGGER.warning(String.format("Ready !!! on port = %s", sPort));
         try (ServerSocket serverSocket = new ServerSocket(Integer.valueOf(sPort)/*9999*/)) {
             Socket socket;
